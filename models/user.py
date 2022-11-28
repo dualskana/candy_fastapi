@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.orm import relationship
 
-from database import Base
+from db.database import Base
 
 
 class User(Base):
@@ -14,3 +14,4 @@ class User(Base):
     is_superuser = Column(Boolean, default=False)
 
     items = relationship("Item", back_populates="owner")
+    letters = relationship("Letter", back_populates="author")

@@ -9,7 +9,7 @@ import crud
 import models
 import schemas
 from core.config import settings
-from database import SessionLocal
+from db.database import SessionLocal
 
 oauth_schema = OAuth2PasswordBearer(tokenUrl="login")
 
